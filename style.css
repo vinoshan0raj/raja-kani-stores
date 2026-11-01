@@ -1,0 +1,213 @@
+
+/* GENERAL PAGE STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F7F0DF;
+    color: #29251F;
+    padding: 15px;
+}
+
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 25px 10px;
+    border-bottom: 3px solid #B58A4A;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: #8B241C;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.contact-details {
+    margin-bottom: 18px;
+}
+
+.contact-details p {
+    color: #8B241C;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+header h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+
+/* CATALOGUE LAYOUT */
+
+#catalogue {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+    color: #8B241C;
+    font-weight: bold;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .contact-details p {
+        font-size: 20px;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    #catalogue {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* CATEGORY CARDS */
+
+.category-card {
+    background-color: #FFFDF7;
+    border: 2px solid #B58A4A;
+    border-radius: 8px;
+    padding: 15px;
+    min-width: 0;
+}
+
+.category-card h3 {
+    background-color: #8B241C;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+
+/* PRODUCT TABLES */
+
+.category-card table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.category-card th {
+    background-color: #E8D5B5;
+    color: #29251F;
+    font-weight: bold;
+}
+
+.category-card th,
+.category-card td {
+    border: 1px solid #C8B38F;
+    padding: 10px 8px;
+    text-align: center;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.category-card td:nth-child(2) {
+    text-align: left;
+}
+
+.category-card tbody tr:nth-child(even) {
+    background-color: #F7F0DF;
+}
+
+.category-card tbody tr:hover {
+    background-color: #EFE1C8;
+}
+
+
+/* MOBILE TABLE STYLING */
+
+@media (max-width: 650px) {
+
+    .category-card {
+        padding: 10px;
+    }
+
+    .category-card h3 {
+        font-size: 18px;
+    }
+
+    .category-card th,
+    .category-card td {
+        padding: 9px 5px;
+        font-size: 12px;
+    }
+
+}
+
+/* AVAILABILITY STATUS */
+
+.available {
+    color: #26733B;
+    font-weight: bold;
+    background-color: #E5F3E8;
+}
+
+.unavailable {
+    color: #A32626;
+    font-weight: bold;
+    background-color: #F9E4E2;
+}
+
+.error-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #FFFDF7;
+    border: 2px solid #B58A4A;
+    border-radius: 8px;
+}
+
+.error-message h3 {
+    color: #8B241C;
+    margin-bottom: 10px;
+}
+
+.error-message button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #8B241C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
